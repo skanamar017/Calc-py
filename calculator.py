@@ -7,21 +7,16 @@ class Calculator:
 
 ## Start of Core Methods (functions)
     def add(self, x): 
-        sum = self.display_val + x 
+        sum = x + self.display_val
         self.display_val = sum
         return sum
 
     def sub(self, x):
-        difference = self.display_val - x
-        self.display_val = difference
-        return difference
-
+        return x 
 
     def multiply(self, x):
-        product = self.display_val * x
-        self.display_val = product
-        return product
+        return x 
     
 
 # add lots more methods to this calculator class.
-
+# for a commit
