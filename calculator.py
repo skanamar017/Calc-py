@@ -45,9 +45,28 @@ class Calculator:
         self.display_val = result
         return result
     
-
-
+    # Variable Exponentiation 
+    def varExp(self, y):
+        result = self.display_val ** y
+        self.display_val = result
+        return result
     
+    def inverse(self):
+        if self.display_val == 0:
+            self.display_val = 'err'
+            return
+
+        result = 1 / self.display_val
+        self.display_val = result
+        return result
+    
+    def invert(self):
+        result = self.display_val * -1
+        return result
+        
+
+
+        
     def clear(self):
         self.display_val = 0
 
