@@ -1,15 +1,22 @@
-class Calculator:
+## Class
+class Calculator:   
 
-    def __init__(self):
-        pass
+## Constructor
+    def __init__(self): 
+        self.display_val = 0
 
-    def add(self, x, y):
-        return x + y
+## Start of Core Methods (functions)
+    def add(self, x): 
+        sum = x + self.display_val
+        self.display_val = sum
+        return sum
 
-    def sub(self, x, y):
-        return 0
+    def sub(self, x):
+        return x 
+
+    def multiply(self, x):
+        return x 
+    
 
 # add lots more methods to this calculator class.
 
-
-# here is a comment for a github or test
