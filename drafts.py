@@ -2,25 +2,26 @@ from calculator import Calculator
 
 
 mode="Decimal" # default mode
+units="Degrees"
 
 def switchDisplayMode():
     if mode=="Decimal":
         mode="Hexadecimal"
-        return mode
     elif mode=="Hexadecimal":
         mode=="Binary"
-        return mode
     elif mode=="Binary":
         mode=="Octal"
-        return mode
     elif mode=="Octal":
         mode=="Decimal"
-        return mode
+    return mode
 
 
 def switchDisplayMode(setting):
-    mode=setting
-    return mode
+    if setting in ["Binary", "Octal", "Decimal", "Hexadecimal"]:
+        mode=setting
+        return mode
+    print("Not a valid mode")
+    return
 
 def getTwoNumbers():
     a = str(input("first number? "))
@@ -36,13 +37,30 @@ def displayResult(x):
 #add set mode operation to calc loop
 
 #need to add degrees to radians and memory
+
+
+def switchUnitsMode():
+    if units=="Degrees":
+        units="Radians"
+    elif units=="Radians":
+        units="Degrees"
+    return units
+
+
+def switchUnitsMode(setting):
+    if setting in ["Degrees", "Radiens"]:
+        units=setting
+        return units
+    print("Not a valid mode")
+    return
+
+
 memory=[]
 
 
 
 
 def performCalcLoop(calc):
-
     choice = input("Operation? ")
     if choice == 'add':
         a, b = getTwoNumbers()
