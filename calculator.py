@@ -102,7 +102,7 @@ class Calculator:
         self.display_val = result
         return result
     
-    def square_rt(self,):
+    def square_rt(self):
         # Is the current display in an error state already?
         if self.display_val < 0:
 
@@ -169,21 +169,21 @@ class Calculator:
     
     def inverse_sine(self):
         if self.units=="Radians":
-            result = math.asinsin(self.display_val)
+            result = math.asin(self.display_val)
         elif self.units=="Degrees":
             result = math.degrees(math.asin(self.display_val))
         return result
 
     def inverse_cosine(self):
         if self.units=="Radians":
-            result = math.acoscos(self.display_val)
+            result = math.acos(self.display_val)
         elif self.units=="Degrees":
             result = math.degrees(math.acos(self.display_val))
         return result
 
     def inverse_tangent(self):
         if self.units=="Radians":
-            result = math.acostan(self.display_val)
+            result = math.atan(self.display_val)
         elif self.units=="Degrees":
             result = math.degrees(math.atan(self.display_val))
         return result

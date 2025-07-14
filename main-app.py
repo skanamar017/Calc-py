@@ -10,6 +10,10 @@ def getNumber():
     a = float(input("number? "))
     return a
 
+def getMode():
+    a = str(input("mode? "))
+    return a
+
 def displayResult(x: float):
     print(x, "\n")
 
@@ -19,29 +23,51 @@ def performCalcLoop(calc):
         choice = input("Operation? ")
         if choice == 'q':
             break  # user types q to quit calulator.
+        elif choice=="Switch Mode":
+            displayResult(calc.switchDisplayMode())
+        elif choice=="Choose Mode":
+            a=getMode()
+            displayResult(calc.switchDisplayMode(a))
+        elif choice=="Switch Units":
+            displayResult(calc.switchUnitsMode())
+        elif choice=="Choose Units":
+            a=getMode()
+            displayResult(calc.switchUnitsMode(a))
+        elif choice=="M+":
+            displayResult(calc.memory_add())
+        elif choice=="MC":
+            displayResult(calc.memory_clear())
+        elif choice=="MRC":
+            displayResult(calc.memory_recall())
         elif choice == 'add':
             a = getNumber()
             displayResult(calc.add(a))
-        elif choice == 'subract':
+        elif choice == 'subtract':
             a = getNumber()
             displayResult(calc.sub(a))
         elif choice == 'multiply':
             a = getNumber()
-            displayResult(calc.mult(a))
+            displayResult(calc.multiply(a))
         elif choice == 'divide':
             a = getNumber()
-            displayResult(calc.div(a))
+            displayResult(calc.divide(a))
         elif choice == 'square':
             displayResult(calc.square())
         elif choice == 'square root':
-            displayResult(calc.square_root())
+            displayResult(calc.square_rt())
         elif choice == 'exponent':
             a = getNumber()
-            displayResult(calc.exponent(a))
+            displayResult(calc.varExp(a))
         elif choice == 'inverse':
             displayResult(calc.inverse())
-        elif choice == 'invert sign':
-            displayResult(calc.invert_sign())
+        elif choice == 'invert':
+            displayResult(calc.invert())
+        elif choice=="percent":
+            a = getNumber()
+            displayResult(calc.percentage(a))
+        elif choice=="nth root":
+            a = getNumber()
+            displayResult(calc.nth_root(a))
         elif choice == 'sine':
             displayResult(calc.sine())
         elif choice == 'cosine':
