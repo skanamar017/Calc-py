@@ -20,50 +20,40 @@ def performCalcLoop(calc):
         if choice == 'q':
             break  # user types q to quit calulator.
         elif choice == 'add':
-            a, b = getTwoNumbers()
-            displayResult(calc.add(a, b))
+            a = getNumber()
+            displayResult(calc.add(a))
         elif choice == 'subract':
-            a, b = getTwoNumbers()
-            displayResult(calc.sub(a, b))
+            a = getNumber()
+            displayResult(calc.sub(a))
         elif choice == 'multiply':
-            a, b = getTwoNumbers()
-            displayResult(calc.mult(a, b))
+            a = getNumber()
+            displayResult(calc.mult(a))
         elif choice == 'divide':
-            a, b = getTwoNumbers()
-            displayResult(calc.div(a, b))
+            a = getNumber()
+            displayResult(calc.div(a))
         elif choice == 'square':
-            a = getNumber()
-            displayResult(calc.square(a))
+            displayResult(calc.square())
         elif choice == 'square root':
-            a = getNumber()
-            displayResult(calc.square_root(a))
+            displayResult(calc.square_root())
         elif choice == 'exponent':
-            a, b = getTwoNumbers()
-            displayResult(calc.exponent(a, b))
+            a = getNumber()
+            displayResult(calc.exponent(a))
         elif choice == 'inverse':
-            a = getNumber()
-            displayResult(calc.inverse(a))
+            displayResult(calc.inverse())
         elif choice == 'invert sign':
-            a = getNumber()
-            displayResult(calc.invert_sign(a))
+            displayResult(calc.invert_sign())
         elif choice == 'sine':
-            a = getNumber()
-            displayResult(calc.sine(a))
+            displayResult(calc.sine())
         elif choice == 'cosine':
-            a = getNumber()
-            displayResult(calc.cosine(a))
+            displayResult(calc.cosine())
         elif choice == 'tangent':
-            a = getNumber()
-            displayResult(calc.tangent(a))
+            displayResult(calc.tangent())
         elif choice == 'inverse sine':
-            a = getNumber()
-            displayResult(calc.inverse_sine(a))
+            displayResult(calc.inverse_sine())
         elif choice == 'inverse consine':
-            a = getNumber()
-            displayResult(calc.inverse_cosine(a))
+            displayResult(calc.inverse_cosine())
         elif choice == 'inverse tangent':
-            a = getNumber()
-            displayResult(calc.inverse_tangent(a))
+            displayResult(calc.inverse_tangent())
         
         else:
             print("That is not a valid input.")

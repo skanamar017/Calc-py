@@ -3,7 +3,7 @@ import math
 
 
 mode="Decimal" # default mode
-units="Degrees"
+units="Radians" #defualt units
 
 def switchDisplayMode():
     if mode=="Decimal":
@@ -68,9 +68,9 @@ def performCalcLoop(calc):
     if choice == 'add':
         b = getNumber()
         if mode=="Binary":
-            a = float(calc.display_val, 2)
+            #a = float(calc.display_val, 2)
             b = float(b, 2)
-            result=calc.add(a, b)
+            result=calc.add(b)
             displayResult(bin(result)[2:])
         elif mode=="Octal":
             a = float(calc.display_val, 8)
@@ -78,7 +78,7 @@ def performCalcLoop(calc):
             result=calc.add(a, b)
             displayResult(oct(result)[2:])
         elif mode=="Decimal":
-            displayResult(calc.add(float(calc.display_val), float(b)))
+            displayResult(calc.add(float(b)))
         elif mode=="Hexadecimal":
             a = float(calc.display_val, 16)
             b = float(b, 16)
@@ -102,3 +102,10 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
+
+
