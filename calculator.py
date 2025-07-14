@@ -38,7 +38,7 @@ class Calculator:
             self.mode=="Decimal"
         return self.mode
 
-    def switchDisplayMode(self, setting):
+    def chooseDisplayMode(self, setting):
         if setting in ["Binary", "Octal", "Decimal", "Hexadecimal"]:
             self.mode=setting
             return self.mode
@@ -52,8 +52,8 @@ class Calculator:
             self.units="Degrees"
         return self.units
 
-    def switchUnitsMode(setting):
-        if setting in ["Degrees", "Radiens"]:
+    def chooseUnitsMode(setting):
+        if setting in ["Degrees", "Radians"]:
             units=setting
             return units
         print("Not a valid mode")

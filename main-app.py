@@ -27,12 +27,12 @@ def performCalcLoop(calc):
             displayResult(calc.switchDisplayMode())
         elif choice=="Choose Mode":
             a=getMode()
-            displayResult(calc.switchDisplayMode(a))
+            displayResult(calc.chooseDisplayMode(a))
         elif choice=="Switch Units":
             displayResult(calc.switchUnitsMode())
         elif choice=="Choose Units":
             a=getMode()
-            displayResult(calc.switchUnitsMode(a))
+            displayResult(calc.chooseUnitsMode(a))
         elif choice=="M+":
             displayResult(calc.memory_add())
         elif choice=="MC":
@@ -80,6 +80,8 @@ def performCalcLoop(calc):
             displayResult(calc.inverse_cosine())
         elif choice == 'inverse tangent':
             displayResult(calc.inverse_tangent())
+        elif choice=="clear":
+            displayResult(calc.clear())
         
         else:
             print("That is not a valid input.")
